@@ -1,68 +1,152 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* Bakery color palette - soft pastels */
+    --background: 30 50% 98%;
+    --foreground: 25 40% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 40% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 40% 20%;
+
+    /* Chocolate brown primary */
+    --primary: 25 50% 28%;
+    --primary-foreground: 30 50% 98%;
+
+    /* Blush pink secondary */
+    --secondary: 0 60% 95%;
+    --secondary-foreground: 25 50% 28%;
+
+    /* Cream muted */
+    --muted: 30 40% 96%;
+    --muted-foreground: 25 20% 50%;
+
+    /* Warm pink accent */
+    --accent: 350 70% 88%;
+    --accent-foreground: 25 50% 28%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 30 50% 98%;
+
+    --border: 30 30% 90%;
+    --input: 30 30% 90%;
+    --ring: 25 50% 28%;
+
+    --radius: 1rem;
+    
+    /* Custom bakery colors */
+    --cream: 30 50% 98%;
+    --blush: 350 100% 95%;
+    --chocolate: 25 50% 28%;
+    --warm-pink: 350 70% 88%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(30 50% 98%) 0%, hsl(350 100% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(30 40% 99%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(25 50% 28% / 0.08);
+    --shadow-card: 0 8px 30px -4px hsl(25 50% 28% / 0.12);
+    --shadow-hover: 0 12px 40px -6px hsl(25 50% 28% / 0.18);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  .dark {
+    --background: 25 30% 12%;
+    --foreground: 30 50% 98%;
+
+    --card: 25 25% 16%;
+    --card-foreground: 30 50% 98%;
+
+    --popover: 25 25% 16%;
+    --popover-foreground: 30 50% 98%;
+
+    --primary: 350 70% 88%;
+    --primary-foreground: 25 30% 12%;
+
+    --secondary: 25 20% 20%;
+    --secondary-foreground: 30 50% 98%;
+
+    --muted: 25 20% 20%;
+    --muted-foreground: 30 30% 65%;
+
+    --accent: 350 60% 75%;
+    --accent-foreground: 25 30% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 30 50% 98%;
+
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 350 70% 88%;
   }
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+} */
