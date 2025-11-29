@@ -1,19 +1,15 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import Footer from './components/Footer';
 
 function App() {
-
   return (
-    <>
-      <div className="App">
-        <Navbar />
-        <h1 className="text-3xl font-bold underline text-blue-600">
-          Hello Cookie Love!
-        </h1>
-        <Footer />
-      </div>
-    </>
+    <div className="App bg-[#FFF8E1] overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Footer />
+    </div>
   )
 }
 

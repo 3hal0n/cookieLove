@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Quicksand:wght@400;600&display=swap');
 @import "tailwindcss";
 
 @layer base {
@@ -105,10 +106,19 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+    font-family: 'Quicksand', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .font-display {
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Quicksand', sans-serif;
   }
 }
 
