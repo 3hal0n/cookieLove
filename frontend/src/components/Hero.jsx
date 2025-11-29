@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const Hero = () => {
   return (
     <header className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
