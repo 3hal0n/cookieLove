@@ -27,7 +27,7 @@ const Hero = () => {
           <h1 className="font-display text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
             The Best <br />
             <span className="text-amber-800 relative inline-block">
-              Cookies
+              Bakery
               <svg className="absolute w-full h-3 -bottom-1 left-0 text-yellow-400" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
               </svg>
@@ -55,7 +55,7 @@ const Hero = () => {
           {/* Using a placeholder for the hero image */}
           <div className="relative z-10 transform rotate-2 hover:rotate-0 transition duration-500">
             <img 
-              src="https://images.unsplash.com/photo-1499636138143-bd630f5cf388?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+              src="src/assets/images/hero1.png" 
               alt="Delicious Cookies" 
               className="rounded-3xl shadow-2xl border-4 border-white w-full max-w-md mx-auto object-cover h-[400px]"
             />
