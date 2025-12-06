@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center group">
           <div className="w-32 md:w-40 transform hover:scale-110 transition duration-300">
             <img 
-              src="/images/logo.svg" 
+              src="src/assets/images/logo.jpg" 
               alt="Cookie Love Logo" 
               className="drop-shadow-lg"
               onError={(e) => {
