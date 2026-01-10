@@ -49,9 +49,9 @@ const ItemCard = ({ item }) => {
 
       <div className="flex items-center justify-between mt-2">
         <div className="text-amber-800 font-display font-bold text-lg">{currency(item.price)}</div>
-        <button className="bg-gradient-to-r from-amber-600 to-yellow-400 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform">
-          Add
-        </button>
+        <Link to={`/menu/${item.id}`} className="bg-gradient-to-r from-amber-600 to-yellow-400 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform inline-flex items-center gap-2">
+          View
+        </Link>
       </div>
     </div>
   );

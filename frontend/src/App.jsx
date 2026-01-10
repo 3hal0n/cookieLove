@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
+import ItemDetail from './components/ItemDetail';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/menu/:id" element={<ItemDetail />} />
         <Route path="*" element={<Hero />} />
       </Routes>
       <Footer />
