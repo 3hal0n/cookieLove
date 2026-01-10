@@ -49,7 +49,7 @@ const ItemCard = ({ item }) => {
 
       <div className="flex items-center justify-between mt-2">
         <div className="text-amber-800 font-display font-bold text-lg">{currency(item.price)}</div>
-        <Link to={`/menu/${item.id}`} className="bg-gradient-to-r from-amber-600 to-yellow-400 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform inline-flex items-center gap-2">
+        <Link to={`/menu/${item.id}`} className="bg-linear-to-r from-amber-600 to-yellow-400 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:scale-105 transition-transform inline-flex items-center gap-2">
           View
         </Link>
       </div>
@@ -69,7 +69,7 @@ const Menu = () => {
   }, [active, q]);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#FFF8E1] to-white pt-28 pb-20">
+    <main className="min-h-screen bg-linear-to-br from-[#FFF8E1] to-white pt-28 pb-20">
       <div className="container mx-auto px-6 md:px-8 lg:px-12">
         <div className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>

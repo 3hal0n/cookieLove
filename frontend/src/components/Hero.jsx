@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
         {/* Left Text */}
         <div className="order-1 md:order-1 text-center md:text-left space-y-6 pl-4 sm:pl-6 md:pl-12 lg:pl-20">
-          <div className="inline-block bg-gradient-to-r from-orange-100 to-yellow-100 text-orange-600 px-5 py-2 rounded-full font-bold text-sm mb-2 transform -rotate-2 shadow-md">
+          <div className="inline-block bg-linear-to-r from-orange-100 to-yellow-100 text-orange-600 px-5 py-2 rounded-full font-bold text-sm mb-2 transform -rotate-2 shadow-md">
             <span className="mr-2">🔥</span> Freshly Baked Daily!
           </div>
           <h1 className="font-display text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-gray-900 leading-[1.1] tracking-tight">
@@ -50,7 +50,7 @@ const Hero = () => {
           <div className="block md:hidden mt-8">
             <div className="relative w-full flex justify-center px-4">
               {/* Decorative background blob */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-50 to-blue-50 rounded-[3rem] transform -rotate-2 scale-95"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-blue-100 via-purple-50 to-blue-50 rounded-4xl transform -rotate-2 scale-95"></div>
               
               <div className="relative z-10 w-full max-w-[420px]">
                 <img
@@ -98,7 +98,7 @@ const Hero = () => {
                 <img 
                   src="/images/hero1.png" 
                   alt="Delicious Cookie Bakery Illustration" 
-                  className="rounded-[2rem] md:rounded-[2.5rem] shadow-2xl w-full max-w-[420px] md:max-w-2xl mx-auto object-contain drop-shadow-2xl"
+                  className="rounded-4xl md:rounded-4xl shadow-2xl w-full max-w-md md:max-w-2xl mx-auto object-contain drop-shadow-2xl"
                   style={{marginTop: 0, marginBottom: 0}}
                   onError={(e) => {
                     e.target.onerror = null;
@@ -138,7 +138,7 @@ const Hero = () => {
 
       {/* Bottom Wave Divider - More pronounced */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none transform rotate-180 z-10">
-        <svg className="relative block w-[calc(150%+1.3px)] h-[80px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <svg className="relative block w-[calc(150%+1.3px)] h-20 md:h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-amber-900"></path>
         </svg>
       </div>
