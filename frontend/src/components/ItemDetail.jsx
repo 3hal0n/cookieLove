@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import menuData from '../lib/menuData';
 
@@ -8,13 +8,9 @@ const ItemDetail = () => {
   const { id } = useParams();
   const [selectedIdx, setSelectedIdx] = useState(0);
 
-  const item = useMemo(() => {
-    for (const cat of menuData) {
-      const found = cat.items.find((i) => i.id === id);
-      if (found) return { ...found, category: cat.category };
-    }
-    return null;
-  }, [id]);
+  const cat = menuData.find((cat) => cat.items.some((i) => i.id === id));
+  const found = cat?.items.find((i) => i.id === id);
+  const item = found ? { ...found, category: cat.category } : null;
 
   if (!item) {
     return (
